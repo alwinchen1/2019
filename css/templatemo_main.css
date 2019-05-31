@@ -1,0 +1,598 @@
+body, html { overflow-x: hidden; }
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal; 
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+}
+/*下面改大標題和底部字體*/
+h1, h2, h3, h4, h5, h6, span { font-family: 'Hind Guntur', sans-serif; }
+tr { font-family: 'Noto Sans TC', sans-serif; }
+
+p {
+    font-family: 'Hind Guntur', 'Noto Sans TC', sans-serif;
+    color: #000;
+	/*改內文字體大小*/
+    font-size: 22px;
+}
+
+p.test1 {
+    width: 140px; 
+    border: 1px solid #000000;
+    word-break: keep-all;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff; /* change if the mask should have another color then white */
+    z-index: 99; /* makes sure it stays on top */
+}
+
+/*這個是進入頁面轉轉轉的動畫的設定*/
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%; /* centers the loading animation horizontally one the screen */
+    top: 50%; /* centers the loading animation vertically one the screen */
+    background-image: url(../images/status.gif); /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px; /* is width and height divided by two */
+}
+
+/* General */
+#main-wrapper {
+     overflow: hidden;
+}
+/*這是條大標題的大小 shadow是陰影*/
+.templatemo-site-title { 
+    color: #fff !important; 
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 1);
+	font-size: 48px;
+}
+
+.templatemo-site-title a, .templatemo-site-title a:hover { 
+	color: #fff;
+	text-decoration: none;
+}
+
+img.slide {
+    width: 100%; 
+    z-index: -9999999; 
+    position: absolute;
+}
+
+.active {
+    display: block;
+}
+
+.inactive {
+    left: 703px;
+    display: none;
+}
+
+.image-section {
+    position: fixed;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    position: absolute;
+}
+
+.templatemo-content {
+    position: static;
+    overflow: hidden; 
+    margin-top: 15%/*之前是36%有點太下來了*/;
+}
+
+/*改白底的參數*/
+.templatemo-content section {
+	font-family: 'Raleway', sans-serif;
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(255,255,255,0.85);/*改白底背景，a=opacity*/
+	padding-bottom: 200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 0px;
+	left: auto;
+	right: 0px;
+}
+
+.templatemo-content-wrapper {
+    overflow: hidden;
+}
+
+/*h2指標題，這邊改標題參數*/
+.templatemo-content h2 {
+    color: #000;
+    font-family: 'Walter Turncoat', cursive;/*'Kalam', cursive;*/
+}
+/*p指內文，這邊改內文參數*/
+.templatemo-content p {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #000;
+	/*改內文字體大小*/
+    font-size: 16px;
+}
+/*li=list，這邊改列項參數*/
+.templatemo-content li {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #000;
+	/*改內文字體大小*/
+    font-size: 16px;
+}
+/*這邊是改側邊攔 width是寬度 原本是220px*/
+.menu {
+    position: fixed; 
+    width: 150px;
+    z-index: 1; 
+    top: 75px;
+}
+
+#menu-list {
+    background-color: rgba(0, 0, 0,0.5);
+    font-size: 16px; 
+    padding: 0;
+}
+
+#menu-list > li {
+    display: block;
+}
+
+
+#menu-list > li > a {
+    font-family: 'Walter Turncoat', cursive; 
+    padding: 10px 0 10px 30px; 
+    text-decoration: none; 
+    display: block;
+    color: #fff; 
+}
+/*hover=動作透明*/
+#menu-list > .active > a,
+#menu-list > li > a:hover { 
+    background-color: rgba(255,255,255,0.25);
+}
+/*圖片的hover*/
+#Img1:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+/*圖片置中的class*/
+.align-center {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#Mascot{
+    position: fixed;  /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+    top: 70%;  /*設置垂直位置*/
+    right: -320px;  /*設置水平位置，依所放的內容多寡需要自行手動調整*/
+	z-index: 98;
+    /*
+	background: #0;  
+    padding: 10px 10px;
+    border-radius: 10px;  
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;*/
+}
+/*當滑鼠移至此區塊時，伸縮區塊*/
+/*
+#Mascot:hover{  
+    right: -1185px;
+}*/
+#banner h1 a:hover{
+color: #fc3a63; /* 當滑鼠經過時，超連結文字顏色變成桃紅色 */
+position: relative; /* 當滑鼠經過超連結時，超連結往右下位移1像素 */
+top: 1px;
+left: 1px;
+}
+
+#people{
+    position: relative;  /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+	z-index: 0;
+	float: left;
+
+
+}
+/* 透明漸變 - color - transparent */
+hr.linestyle {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	z-index: 0;
+}
+/* 雙線 */
+hr.style-three {
+    border: 0;
+    border-bottom: 2px dashed #999/*#ccc*/;
+    /*background: #999;*/
+	z-index: 0;
+}
+/* 單線陰影 */
+hr.style-four {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+	z-index: 0;
+}
+/* 内嵌 */
+hr.style-six {
+    border: 0;
+    height: 0;
+    border-top: 2px solid rgba(0,0,0,0.5);
+    border-bottom: 2px solid rgba(207,217,223,0.3)/*(255,255,255,0.3)*/;
+}
+/*控一些間距*/
+pre {
+	height: 1px;
+	border: transparent;
+	background-color: transparent;
+}
+
+#responsive {
+    font-size: 16px;
+    padding: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#responsive li {
+    display: block;
+}
+
+#responsive li a {
+    font-family: 'Raleway', sans-serif; 
+    color: #fff; 
+    text-decoration: none; 
+    padding: 10px 0;
+    display: block;
+}
+
+#responsive > .active > a,
+#responsive li a:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+#map-canvas {
+	height: 256px;
+	margin-bottom: 10px;
+}
+
+.templatemo-content {
+    padding-bottom: 6%;
+}
+
+.footer {
+    overflow: hidden; 
+    position: fixed; 
+    bottom: 10px;
+}
+
+.footer-text {
+    font-family: 'Raleway', sans-serif; 
+    color: #fff; 
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 1);
+    margin-left: 460px; /*改footer的位置*/
+    font-size: 14px;
+}
+
+.footer-text a, .footer-text a:hover { 
+	color: #fff;
+	text-decoration: none;
+}
+
+@media (max-width: 991px) {
+    .footer {
+        overflow:hidden; 
+        position:static;
+        text-align: center;
+        
+    }
+    .footer-text {
+        margin-left: 0;
+    }
+}
+
+.carousel-control {
+    top: 33%;
+}
+/*intro video mobile size*/
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*小動畫*/
+.ball {
+    position: fixed;  /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+    top: 78%;  /*設置垂直位置*/
+    left: 0%;  /*設置水平位置，依所放的內容多寡需要自行手動調整*/
+	z-index: 95;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	border-radius: 50%;
+	background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+	/*width: 100px;
+    height: 100px;
+    background: yellow;
+    display: block;*/  
+}
+.ball:hover {
+	position: fixed;  /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+    top: 78%;  /*設置垂直位置*/
+    left: 0%;  /*設置水平位置，依所放的內容多寡需要自行手動調整*/
+	z-index: 95;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	border-radius: 50%;
+	background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+	
+	-webkit-animation: MoveToRight 2s /*infinite*/; /* Safari 4.0 - 8.0 */
+	animation: MoveToRight 2s /*infinite*/;
+	/*animation-name: MoveToRight;    /*動畫名稱，需與 keyframe 名稱對應*/
+    /*animation-duration: 2s;    /*動畫持續時間，單位為秒*/
+    /*animation-delay: 0s;    /*動畫延遲開始時間*/
+    /*animation-iteration-count:infinite;    /*動畫次數，infinite 為無限次*/ 
+    
+}
+
+@keyframes MoveToRight {
+    from { left: 0; }
+    to { left: 90%; }
+}
+
+@-webkit-keyframes MoveToRight {
+    from { left: 0; }
+    to { left: 90%; }
+}
+
+.star {
+    position: fixed;  /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+    top: 78%;  /*設置垂直位置*/
+    left: -1%;  /*設置水平位置，依所放的內容多寡需要自行手動調整*/
+	z-index: 94;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	border-radius: 50%;
+	background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); 
+	
+}
+.star:hover {
+	position: fixed;  /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+    top: 78%;  /*設置垂直位置*/
+    left: -1%;  /*設置水平位置，依所放的內容多寡需要自行手動調整*/
+	z-index: 94;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	border-radius: 100%;
+	background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	
+	animation-name: MoveToRight2;    /*動畫名稱，需與 keyframe 名稱對應*/
+    animation-duration: 3s;    /*動畫持續時間，單位為秒*/
+    animation-delay: 2s;    /*動畫延遲開始時間*/
+    /*animation-iteration-count:infinite;    /*動畫次數，infinite 為無限次*/ 
+    
+}
+
+@keyframes MoveToRight {
+    from { left: 0; }
+    to { left: 90%; }
+}
+
+@-webkit-keyframes MoveToRight {
+    from { left: 0; }
+    to { left: 90%; }
+}
+@keyframes MoveToRight2 {
+    from { left: 85%; }
+    to { left: 85%; }
+}
+
+@-webkit-keyframes MoveToRight2 {
+    from { left: 85%; }
+    to { left: 85%; }
+}
+
+
+.table-br {
+	border-color:black;
+	border-width:3px;
+	border-style:solid;
+	padding:5px;
+}
+/*1118加入*/
+.wrapper {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.content-main {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .content-main {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+.content-secondary {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .content-secondary {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+/*好玩轉轉晶體*/
+.camera{
+			width:200px;
+			height:200px;
+			perspective-origin:50% -50%;
+			-moz-perspective-origin:50% -50%;
+			-webkit-perspective-origin:50% -50%;
+			perspective:1500px;
+			-moz-perspective:1500px;
+			-webkit-perspective:1500px;
+		}
+		.space{
+			position:relative;
+			width:100%;
+			height:100%;
+			transform-style:preserve-3d;
+			-moz-transform-style:preserve-3d;
+			-webkit-transform-style:preserve-3d;
+			transform-origin:center center -50px;
+			-moz-transform-origin:center center -50px;
+			-webkit-transform-origin:center center -50px;
+			animation:s 4s linear infinite;
+			-moz-animation:s 4s linear infinite;
+			-webkit-animation:s 4s linear infinite;
+		}
+		@keyframes s{
+			0%{
+				transform:rotateY(0);
+			}
+			100%{
+				transform:rotateY(-359.9deg);
+			}
+		}
+		@-moz-keyframes s{
+			0%{
+				-moz-transform:rotateY(0);
+			}
+			100%{
+				-moz-transform:rotateY(-359.9deg);
+			}
+		}
+		@-webkit-keyframes s{
+			0%{
+				-webkit-transform:rotateY(0);
+			}
+			100%{
+				-webkit-transform:rotateY(-359.9deg);
+			}
+		}
+		.space div{
+			position:absolute;
+		}
+		.box1, .box2{
+			transform-style:preserve-3d;
+			-moz-transform-style:preserve-3d;
+			-webkit-transform-style:preserve-3d;
+		}
+		.box1 div,.box2 div{
+		  width:0;
+		  height:0;
+		  border-width:0 50px 87px;
+		  border-style:solid;
+		  opacity:.4;
+		}
+		.box2{
+  		transform-origin: center 71px -50px;
+  		transform: rotateX(180deg) translateY(-132px);
+  		-moz-transform-origin: center 71px -50px;
+  		-moz-transform: rotateX(180deg) translateY(-132px);
+  		-webkit-transform-origin: center 71px -50px;
+  		-webkit-transform: rotateX(180deg) translateY(-132px);
+		}
+		.face1{
+			border-color:transparent transparent #f00;
+			transform-origin:center bottom;
+			transform:translateX(50px) translateY(50px) rotateX(35.36deg);
+			-moz-transform-origin:center bottom;
+			-moz-transform:translateX(50px) translateY(50px) rotateX(35.36deg);
+			-webkit-transform-origin:center bottom;
+			-webkit-transform:translateX(50px) translateY(50px) rotateX(35.36deg);
+		}
+		.face2{
+			border-color:transparent transparent #00f;
+			transform-origin:right bottom;
+			transform:translateX(50px) translateY(50px) rotateY(-90deg) rotateX(-35.36deg);
+			-moz-transform-origin:right bottom;
+			-moz-transform:translateX(50px) translateY(50px) rotateY(-90deg) rotateX(-35.36deg);
+			-webkit-transform-origin:right bottom;
+			-webkit-transform:translateX(50px) translateY(50px) rotateY(-90deg) rotateX(-35.36deg);
+		}
+		.face3{
+			border-color:transparent transparent #0f0;
+			transform-origin:left bottom;
+			transform:translateX(50px) translateY(50px)  translateZ(-100px) rotateX(-35.36deg);
+			-moz-transform-origin:left bottom;
+			-moz-transform:translateX(50px) translateY(50px)  translateZ(-100px) rotateX(-35.36deg);
+			-webkit-transform-origin:left bottom;
+			-webkit-transform:translateX(50px) translateY(50px)  translateZ(-100px) rotateX(-35.36deg);
+		}
+		.face4{
+			border-color:transparent transparent #f90;
+			transform-origin:left bottom;
+			transform:translateX(50px) translateY(50px) rotateY(90deg) rotateX(-35.36deg);
+			-moz-transform-origin:left bottom;
+			-moz-transform:translateX(50px) translateY(50px) rotateY(90deg) rotateX(-35.36deg);
+			-webkit-transform-origin:left bottom;
+			-webkit-transform:translateX(50px) translateY(50px) rotateY(90deg) rotateX(-35.36deg);
+		}
+		.box2 .face1{
+			border-color:transparent transparent #f0f;
+		}
+		.box2 .face2{
+			border-color:transparent transparent #069;
+		}
+		.box2 .face3{
+			border-color:transparent transparent #000;
+		}
+		.box2 .face4{
+			border-color:transparent transparent #0ff;
+		}
